@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#a33700",
+                    "primary-dim": "#8f2f00",
+                    "on-secondary-fixed": "#483000",
+                    "surface-bright": "#f9f6f5",
+                    "inverse-surface": "#0e0e0e",
+                    "on-primary": "#ffefeb",
+                    "on-primary-fixed": "#000000",
+                    "on-error": "#ffefee",
+                    "secondary-dim": "#6b4900",
+                    "primary-container": "#ff7943",
+                    "on-background": "#2f2f2e",
+                    "tertiary": "#b5161e",
+                    "surface-container-high": "#e4e2e1",
+                    "on-secondary-fixed-variant": "#6c4a00",
+                    "on-tertiary": "#ffefed",
+                    "background": "#f9f6f5",
+                    "on-tertiary-fixed-variant": "#7a000b",
+                    "on-secondary-container": "#614100",
+                    "secondary-fixed-dim": "#ffb623",
+                    "surface-variant": "#dfdcdc",
+                    "primary-fixed-dim": "#fc6018",
+                    "on-error-container": "#570008",
+                    "on-primary-container": "#441200",
+                    "tertiary-dim": "#a40113",
+                    "on-tertiary-container": "#690008",
+                    "primary-fixed": "#ff7943",
+                    "on-secondary": "#fff1df",
+                    "error-dim": "#9f0519",
+                    "surface-container": "#eae7e7",
+                    "tertiary-fixed": "#ff9289",
+                    "surface": "#f9f6f5",
+                    "on-surface": "#2f2f2e",
+                    "inverse-on-surface": "#9e9c9c",
+                    "secondary-fixed": "#ffc96f",
+                    "secondary": "#7b5400",
+                    "error": "#b31b25",
+                    "on-surface-variant": "#5c5b5b",
+                    "surface-container-highest": "#dfdcdc",
+                    "error-container": "#fb5151",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#ff7b71",
+                    "primary": "#a33700",
+                    "surface-container-low": "#f3f0ef",
+                    "secondary-container": "#ffc96f",
+                    "on-primary-fixed-variant": "#531800",
+                    "inverse-primary": "#fc6018",
+                    "surface-dim": "#d6d4d3",
+                    "outline-variant": "#afadac",
+                    "outline": "#787676",
+                    "tertiary-container": "#ff9289",
+                    "on-tertiary-fixed": "#3a0002"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-orange-900 dark:text-orange-100 font-headline tracking-tight">Singkong Kriuk</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+<a class="text-orange-700 dark:text-orange-400 border-b-2 border-orange-700 pb-1 transition-all duration-300 hover:scale-105" href="#">Beranda</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 transition-all duration-300 hover:scale-105" href="#varian">Varian Rasa</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 transition-all duration-300 hover:scale-105" href="#">Cara Pesan</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 transition-all duration-300 hover:scale-105" href="#kontak">Kontak</a>
+</div>
+<a class="hidden md:block bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-full font-bold transition-transform scale-95 active:scale-90 hover:scale-100 shadow-sm" href="https://wa.me/62882009835901">Pesan Sekarang</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block bg-secondary-container/40 backdrop-blur-md text-on-secondary-container px-4 py-1.5 rounded-full font-label font-bold text-sm mb-6">
+                    Kualitas Premium Tradisional
+                </span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-6">
+                    Kelezatan Singkong Kriuk yang <span class="text-primary">Tak Terlupakan</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Camilan tradisional dengan sentuhan modern, renyah di setiap gigitan. Dibuat dari singkong pilihan dengan bumbu rahasia warisan nusantara.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-8 py-4 rounded-full font-headline font-extrabold text-lg flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20" href="https://wa.me/62882009835901">
+<span class="material-symbols-outlined" data-weight="fill">shopping_cart</span>
+                        Pesan Sekarang
+                    </a>
+<a class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-headline font-bold text-lg transition-all hover:scale-105" href="#varian">
+                        Lihat Menu
+                    </a>
+</div>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-container/20 rounded-xl -rotate-6 scale-95"></div>
+<img alt="Dua mangkuk keripik singkong varian original dan pedas di atas meja kayu pedesaan" class="w-full h-full object-cover rounded-xl shadow-2xl relative z-10" data-alt="A high-quality, professional food photography shot of two bowls of cassava chips (keripik singkong). One bowl contains classic golden-yellow savory chips (original), and the other bowl contains reddish, spicy-looking chips coated with chili flakes (pedas). The bowls are placed on a rustic wooden table with some raw cassava and dried chili peppers in the background. Warm, appetizing lighting, cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvD7WgzAhzCPQ9RXy7uX9353Rj88fr03UHbraql0CRxxj4cYbdnmQdspEBKwp0AuvH8ITnHqdq4N8kVq1bgi79DVi8fWCCH07XbEweA-1rxLUNE7_oLZETAsjh1ghl0S1N_PGYRQUJuuprQ1DYPeqT1yCBeyLMqK6xtI5BShrVAATDENQm405ccqd4apTgacmkFSQpUoUYwJi2R8fG9znEJ25wLzW5oiLyas4b784SoarIBdFxsdW6bXLUlBR8Z8udf6gAzPO5DLWH"/>
+<!-- Floating Flavor Chip Example -->
+<div class="absolute -bottom-6 -left-6 z-20 glass-card p-6 rounded-lg shadow-xl border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">100% Alami</div>
+<div class="text-sm text-on-surface-variant">Tanpa pengawet buatan</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Varian Rasa Section -->
+<section class="py-24 bg-surface-container-low" id="varian">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Varian Rasa Ikonik</h2>
+<div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Original Card -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:scale-[1.02] shadow-sm hover:shadow-xl">
+<div class="h-80 overflow-hidden relative">
+<img alt="Original Flavor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Professional food photography of a bowl of golden-yellow, crispy cassava chips (keripik singkong) with a light dusting of sea salt on a rustic wooden background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD-8V3wfHnHOdoR6UBO6odhjtOxA3BTrq7H7uRgfA5zyu2m7G2T6rPEtPJLHrvVJrtjO7ccX6Qb0f9AZtUXslxM2nCGIABmCBwiSefSEvZ2_KnBBSIGnxZBH2-mvLwq08iYTmSHiV2a0k7vvSvnyQqrLv_VjhWcozTZSGr1-deessFfXKeXZnY-rTLWC2mLCZIGq79eANc2_hl2PdaeTRIFBc6GW0KA7kQ9ofxKAVQ8fcO9XWQl8hyFOYUFs3z2Lf5X663aEBxJuKH"/>
+<div class="absolute bottom-4 left-4 glass-card px-4 py-2 rounded-lg">
+<span class="text-primary font-headline font-extrabold text-xl">Rp 15.000</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Original</h3>
+<p class="text-on-surface-variant">Classic Savory Delight</p>
+</div>
+<span class="bg-secondary-container/30 text-secondary-dim px-4 py-1 rounded-full font-label font-bold text-sm">Best Seller</span>
+</div>
+<p class="text-on-background mb-8 leading-relaxed">
+                            Rasa asli singkong yang gurih dengan taburan garam laut pilihan. Sempurna untuk pecinta cita rasa autentik yang menenangkan.
+                        </p>
+<a class="w-full py-3 bg-surface-container-high text-on-surface rounded-full font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center gap-2" href="https://wa.me/62882009835901">
+<span class="material-symbols-outlined">add_circle</span>
+                            Pesan Original
+                        </a>
+</div>
+</div>
+<!-- Pedas Card -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:scale-[1.02] shadow-sm hover:shadow-xl">
+<div class="h-80 overflow-hidden relative">
+<img alt="Professional food photography of a bowl of spicy cassava chips (keripik singkong pedas)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Professional food photography of a bowl of spicy cassava chips (keripik singkong pedas), thinly sliced and coated with vibrant red chili flakes and spices, looking very crispy and appetizing, rustic wooden background, warm lighting, close-up shot, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnb4Fx-XvGHeaggK-WcOA9VQgOVFLAnnlR7MWZGhvsWM_VOE12ldg52QzDjyOKo2X09h3ROQN8Lzpx637sbLS2YXWFczbsPKi4M3WZLIQAF5jAqTpGB1Z7pcj9kID2FK7NCK4d6YpIXjvG1hCfRCjse0wKB2X89xbqc49o9PphW2THzKSvGb1HNas4f1JuwqM7bxCuNselF9hwlJ53fuCj2edAu5bTNefpECS5yXftojymU631jga6kqshkMFcYxajbT2do6ib1ewT"/>
+<div class="absolute bottom-4 left-4 glass-card px-4 py-2 rounded-lg">
+<span class="text-tertiary font-headline font-extrabold text-xl">Rp 18.000</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Pedas</h3>
+<p class="text-on-surface-variant">Spicy Chili Explosion</p>
+</div>
+<span class="bg-tertiary/10 text-tertiary px-4 py-1 rounded-full font-label font-bold text-sm">Hot &amp; Spicy</span>
+</div>
+<p class="text-on-background mb-8 leading-relaxed">
+                            Sensasi pedas yang nendang dari cabai asli pilihan yang dikeringkan. Memberikan ledakan rasa di setiap gigitan yang membuat ketagihan.
+                        </p>
+<a class="w-full py-3 bg-surface-container-high text-on-surface rounded-full font-bold hover:bg-tertiary hover:text-on-tertiary transition-colors flex items-center justify-center gap-2" href="https://wa.me/62882009835901">
+<span class="material-symbols-outlined">local_fire_department</span>
+                            Pesan Pedas
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pembayaran Section -->
+<section class="py-20 bg-surface">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="font-headline text-2xl font-bold text-on-surface-variant mb-10 tracking-wide uppercase">Terima Pembayaran via E-Wallet</h2>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity">
+<!-- Placeholder for OVO -->
+<div class="flex flex-col items-center gap-2 group cursor-default">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+</div>
+<span class="font-bold text-on-surface">OVO</span>
+</div>
+<!-- Placeholder for DANA -->
+<div class="flex flex-col items-center gap-2 group cursor-default">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+</div>
+<span class="font-bold text-on-surface">DANA</span>
+</div>
+<!-- Placeholder for GOPAY -->
+<div class="flex flex-col items-center gap-2 group cursor-default">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">wallet</span>
+</div>
+<span class="font-bold text-on-surface">GOPAY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-primary-container/10 p-10 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-extrabold text-on-primary-container mb-4">Pengiriman Cepat</h3>
+<p class="text-on-primary-container/80 max-w-sm">Kami memastikan keripik sampai ke tangan Anda tetap renyah dan utuh. Pengiriman dilakukan setiap hari kerja.</p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[180px] text-primary/10 group-hover:rotate-12 transition-transform">local_shipping</span>
+</div>
+<div class="bg-secondary-container/20 p-10 rounded-xl group">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-weight="fill">verified_user</span>
+<h3 class="font-headline text-2xl font-bold text-on-secondary-container mb-2">Higienis</h3>
+<p class="text-on-secondary-container/80 text-sm">Diproses dengan standar kebersihan tinggi dan kemasan kedap udara.</p>
+</div>
+<div class="bg-tertiary-container/20 p-10 rounded-xl group">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6" data-weight="fill">eco</span>
+<h3 class="font-headline text-2xl font-bold text-on-tertiary-container mb-2">Bahan Lokal</h3>
+<p class="text-on-tertiary-container/80 text-sm">Mendukung petani singkong lokal untuk kualitas bahan baku terbaik.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container p-10 rounded-xl flex items-center justify-between group">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Ready Stok Setiap Hari</h3>
+<p class="text-on-surface-variant">Siap kirim ke seluruh pelosok Nusantara.</p>
+</div>
+<span class="material-symbols-outlined text-6xl text-on-surface/20 group-hover:scale-110 transition-transform">inventory_2</span>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp Floating CTA -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+<div class="bg-surface-container-lowest px-4 py-2 rounded-lg shadow-xl border border-primary-container/20 animate-bounce hidden md:block">
+<p class="text-sm font-bold text-primary">Tanya Stok Sekarang!</p>
+</div>
+<a class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center group" href="https://wa.me/62882009835901">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.6 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+</svg>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 group-hover:ml-3 font-bold whitespace-nowrap">Hubungi Kami</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900" id="kontak">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto w-full gap-6">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-orange-900 font-headline">Singkong Kriuk</div>
+<p class="text-stone-500 dark:text-stone-400 text-sm max-w-xs text-center md:text-left font-body">
+                    Membawa cita rasa tradisional keripik singkong ke level gourmet yang modern.
+                </p>
+</div>
+<div class="flex gap-8 font-['Be_Vietnam_Pro'] text-sm">
+<a class="text-stone-500 dark:text-stone-400 opacity-80 hover:opacity-100 transition-opacity hover:text-orange-600 underline-offset-4 hover:underline" href="https://wa.me/62882009835901">WhatsApp</a>
+<a class="text-stone-500 dark:text-stone-400 opacity-80 hover:opacity-100 transition-opacity hover:text-orange-600 underline-offset-4 hover:underline" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-400 opacity-80 hover:opacity-100 transition-opacity hover:text-orange-600 underline-offset-4 hover:underline" href="#">Lokasi Toko</a>
+</div>
+<div class="text-stone-500 dark:text-stone-400 text-sm font-['Be_Vietnam_Pro'] text-center md:text-right">
+                © 2024 Singkong Kriuk - Kelezatan Tradisional Modern
+            </div>
+</div>
+</footer>
+</body></html>
